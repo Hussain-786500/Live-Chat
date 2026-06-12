@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF QR Generator</title>
+
+    <!-- CSS LINK (THIS IS CORRECT 👍) -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Welcome to PDF QR Generator</h1>
+    <p>Upload your PDF or Image file</p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+
+        <br><br>
+
+        <button type="submit">Generate QR</button>
+    </form>
+
+</div>
+
+</body>
+</html>
