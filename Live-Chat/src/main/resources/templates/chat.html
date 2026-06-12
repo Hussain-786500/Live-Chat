@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>chat</title>
+    <link rel="stylesheet" href="/css/Main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+
+    <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+
+<main>
+<section class="border">
+
+<div id="userPanel">
+         <h3>Online Users</h3>
+         <ul id="userList"></ul>
+   </div>
+    
+<h1> < Apna Chat > </h1>
+<p id="userName"></p>
+ 
+<!-- login section -->
+<div id="loginDiv">
+ <span class="icon">👤</span>
+     <input type="text" id="senderInput" placeholder="User Name...">
+     <button class="B1" onclick="connect()">🚀Join Chat</button>
+</div>
+
+<!-- chat section -->
+<div style="display: none;" id="messageBlock">
+
+
+    <!-- NEW: message input wrapper (CSS safe, no impact) -->
+    <div class="inputBox">
+
+        <input type="text" id="messageInput" placeholder="✍️Enter Message">
+        <button class="B2" onclick="sendMessage()">Send ➤ </button>
+
+    </div>
+
+
+</div>
+</section>
+
+<!-- message list (UNCHANGED) -->
+<ol id="messageList"></ol>
+
+</main>
+
+</body>
+</html>
